@@ -22,7 +22,8 @@ func drawGrid(grid grid.Grid, graphics graphics.Graphics) {
 
 func main() {
 	var grd = grid.NewGrid(360, 270)
-	var gfx = graphics.NewGraphics(1200, 900, 0.9)
+	var gfx = graphics.NewGraphics(1200, 900)
+	gfx.CellScale = 0.9
 
 	grd.Randomize()
 	gfx.CalcTileSize(grd.Size.X, grd.Size.Y)

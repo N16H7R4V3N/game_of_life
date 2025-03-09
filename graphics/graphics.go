@@ -11,11 +11,11 @@ type Graphics struct {
 	TileSize     math.Vector2DFloat32 // tile's size after applying the cell's scale
 }
 
-func NewGraphics(screenWidth, screenHeight int32, cellSize float32) *Graphics {
+func NewGraphics(screenWidth, screenHeight int32) *Graphics {
 	var g = Graphics{}
 	g.Screen.Width = screenWidth
 	g.Screen.Height = screenHeight
-	g.CellScale = cellSize
+	g.CellScale = 1.0
 	return &g
 }
 
